@@ -11,10 +11,12 @@
  */
 public class Picture
 {
+    private Square sky;
     private Square wall;
     private Square window;
     private Triangle roof;
     private Circle sun;
+    private Circle moon;
     private boolean drawn;
 
     /**
@@ -22,10 +24,12 @@ public class Picture
      */
     public Picture()
     {
+        sky = new Square();
         wall = new Square();
         window = new Square();
         roof = new Triangle();  
         sun = new Circle();
+        moon = new Circle(); 
         drawn = false;
     }
 
@@ -50,13 +54,29 @@ public class Picture
             roof.moveHorizontal(20);
             roof.moveVertical(-60);
             roof.makeVisible();
-    
+            
             sun.changeColor("yellow");
             sun.moveHorizontal(100);
             sun.moveVertical(-40);
             sun.changeSize(80);
             sun.makeVisible();
             drawn = true;
+            
+            moon.changeColor("blue");
+            moon.moveHorizontal(80);
+            moon.moveVertical(-40);
+            moon.changeSize(80);
+            moon.makeVisible();
+            drawn = true;
+            
+            
+            sky.changeColor("blue");
+            sky.changeSize(500);
+            sky.moveVertical(20);
+            sky.changeSize(120);
+            sky.makeVisible();
+    
+            
         }
     }
 
