@@ -4,10 +4,15 @@ import java.util.List;
 import java.util.*;
 
 /**
+ * I added more colors to the setForeGroundColor method- Daisry Joy Ladignon
+ *
+ * 
+ * 
  * Canvas is a class to allow for simple graphical drawing on a canvas.
  * This is a modification of the general purpose Canvas, specially made for
  * the BlueJ "shapes" example. 
- *
+ * 
+ * 
  * @author: Bruce Quig
  * @author: Michael Kšlling (mik)
  *
@@ -131,19 +136,34 @@ public class Canvas
         else if(colorString.equals("blue")) {
             graphic.setColor(new Color(30, 75, 220));
         }
+        else if(colorString.equals("dark blue")) {
+            graphic.setColor(new Color(25,25,112));
+        }
+        else if(colorString.equals("light blue")) {
+            graphic.setColor(new Color(135,206,250));
+        }
+        else if(colorString.equals("rose")) {
+            graphic.setColor(new Color(255,255,255));
+        }
+      
+        else if(colorString.equals("light green")) {
+            graphic.setColor(new Color(152,251,152));
+        }
         else if(colorString.equals("yellow")) {
             graphic.setColor(new Color(255, 230, 0));
+        }
+        else if(colorString.equals("purple")) {
+            graphic.setColor(new Color(153,50,204));
+        }
+        else if(colorString.equals("pink")) {
+            graphic.setColor(new Color(255,105,180));
         }
         else if(colorString.equals("green")) {
             graphic.setColor(new Color(80, 160, 60));
         }
-        else if(colorString.equals("purple")) {
-            graphic.setColor(new Color(148, 0, 211));
-        }
         else if(colorString.equals("magenta")) {
             graphic.setColor(Color.magenta);
         }
-        
         else if(colorString.equals("white")) {
             graphic.setColor(Color.white);
         }
