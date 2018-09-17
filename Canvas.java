@@ -137,9 +137,13 @@ public class Canvas
         else if(colorString.equals("green")) {
             graphic.setColor(new Color(80, 160, 60));
         }
+        else if(colorString.equals("purple")) {
+            graphic.setColor(new Color(148, 0, 211));
+        }
         else if(colorString.equals("magenta")) {
             graphic.setColor(Color.magenta);
         }
+        
         else if(colorString.equals("white")) {
             graphic.setColor(Color.white);
         }

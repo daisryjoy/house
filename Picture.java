@@ -6,15 +6,15 @@
  *
  * This class was written as an early example for teaching Java with BlueJ.
  * 
- * @author  Michael Kšlling and David J. Barnes
- * @version 2016.02.29
+ * @author  Daisry Joy Ladignon 
+ * @version 2018.09.16
  */
 public class Picture
 {
     private Square sky;
-    private Square wall;
-    private Square window;
+    private Person human;  
     private Triangle roof;
+    private Square buildingA;
     private Circle sun;
     private Circle moon;
     private boolean drawn;
@@ -25,9 +25,9 @@ public class Picture
     public Picture()
     {
         sky = new Square();
-        wall = new Square();
-        window = new Square();
+        human = new Person(); 
         roof = new Triangle();  
+        buildingA = new Square();
         sun = new Circle();
         moon = new Circle(); 
         drawn = false;
@@ -39,16 +39,28 @@ public class Picture
     public void draw()
     {
         if(!drawn) {
-            wall.moveHorizontal(-140);
-            wall.moveVertical(20);
-            wall.changeSize(120);
-            wall.makeVisible();
             
-            window.changeColor("black");
-            window.moveHorizontal(-120);
-            window.moveVertical(40);
-            window.changeSize(40);
-            window.makeVisible();
+            human.changeColor("yellow");
+            human.moveHorizontal(150);
+            human.moveVertical(-60);
+            human.changeSize(100,60);
+            human.makeVisible();
+            drawn = true;
+            
+            human.changeColor("black");
+            human.changeSize(100, 60);
+            human.moveHorizontal(250);
+            human.moveVertical(190);
+            human.makeVisible();
+            drawn = true;
+            
+          
+            buildingA.changeColor("black");
+            buildingA.changeSize(40);
+            buildingA.moveVertical(260);
+            buildingA.moveHorizontal(460);
+            buildingA.makeVisible(); 
+            drawn = true; 
     
             roof.changeSize(60, 180);
             roof.moveHorizontal(20);
@@ -56,26 +68,21 @@ public class Picture
             roof.makeVisible();
             
             sun.changeColor("yellow");
-            sun.moveHorizontal(100);
-            sun.moveVertical(-40);
+            sun.moveHorizontal(150);
+            sun.moveVertical(-60);
             sun.changeSize(80);
             sun.makeVisible();
             drawn = true;
             
             moon.changeColor("blue");
-            moon.moveHorizontal(80);
-            moon.moveVertical(-40);
+            moon.moveHorizontal(130);
+            moon.moveVertical(-60);
             moon.changeSize(80);
             moon.makeVisible();
             drawn = true;
             
             
-            sky.changeColor("blue");
-            sky.changeSize(500);
-            sky.moveVertical(20);
-            sky.changeSize(120);
-            sky.makeVisible();
-    
+           
             
         }
     }
@@ -85,8 +92,9 @@ public class Picture
      */
     public void setBlackAndWhite()
     {
-        wall.changeColor("black");
-        window.changeColor("white");
+        human.changeColor("black");
+        sky.changeColor("black");
+        moon.changeColor("white");
         roof.changeColor("black");
         sun.changeColor("black");
     }
@@ -96,9 +104,9 @@ public class Picture
      */
     public void setColor()
     {
-        wall.changeColor("red");
-        window.changeColor("black");
-        roof.changeColor("green");
         sun.changeColor("yellow");
+        sky.changeColor("blue");
+        human.changeColor("black");
+        moon.changeColor("blue");
     }
 }
